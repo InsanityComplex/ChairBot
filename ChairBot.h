@@ -8,6 +8,12 @@ class ChairBot{
 	int MAX_SPEED;	
 	int left_sonar;
 	int right_sonar;
+
+	int pulse_start;
+	int pulse_stop;
+	int pulse_toggle;
+
+
 	ChairBot();
 	void drive(int left, int right);
 	/*
@@ -20,6 +26,6 @@ class ChairBot{
 	*/
 	void get_heading();
 	void check_sonar();
-	
+	void count_pulse();	
 };
 
