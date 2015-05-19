@@ -1,5 +1,4 @@
 #include "Arduino.h"
-#include "C:\Program Files (x86)\Arduino\hardware\arduino\avr\libraries\SoftwareSerial\SoftwareSerial.h"
 
 class ChairBot{
 	public:
@@ -10,7 +9,6 @@ class ChairBot{
 	int left_sonar;
 	int right_sonar;
 	ChairBot();
-	SoftwareSerial* motor;	
 	void drive(int left, int right);
 	/*
 	void forward(int forwardSpeed);
