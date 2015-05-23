@@ -15,6 +15,7 @@ class ChairBot{
 
 
 	ChairBot();
+	void begin();
 	void drive(int left, int right);
 	/*
 	void forward(int forwardSpeed);
@@ -24,7 +25,7 @@ class ChairBot{
 	void spinLeft(int degrees);
 	void spinRight(int degrees);
 	*/
-	void get_heading();
+	int get_heading();
 	void check_sonar();
 	void count_pulse();	
 };
