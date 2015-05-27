@@ -9,10 +9,7 @@ boolean state=0;
 
 void setup() {
   Serial.begin(9600);
-  Serial.println("Titty");
   cb.begin();
-  Serial.println("Sprinkles");
-  pinMode(13,OUTPUT);
 }
 
 void loop() {

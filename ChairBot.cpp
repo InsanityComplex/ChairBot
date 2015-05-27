@@ -5,12 +5,16 @@
 #include "ChairBot.h"
 
 int MAX_SPEED=1028;
+int MAX_PING=500;  //Reduce this if pings are causing lag
+
 SoftwareSerial motor(2,3);
 compass compass;
-//NewPing left_sonar(7,8);
+
+NewPing left_sonar(4,5, MAX_PING); //Trigger pin, echo pin, max wait time
+NewPing center_sonar(6,7, MAX_PING);
+NewPing right_sonar(8,9, MAX_PING);
 
 ChairBot::ChairBot(){
-//	attachInterrupt(0, ChairBot::count_pulse, CHANGE);
 	}
 
 void ChairBot::begin(){
@@ -27,8 +31,25 @@ void ChairBot::drive(int left, int right){
 	motor.println(right);
 	}
 
-void ChairBot::check_sonar(){
+void ChairBot::turn(){
 	
+	}
+
+void ChairBot::turn_to_heading(){
+
+	}
+
+
+unsigned int ChairBot::distance_left(){
+	return center_sonar.ping_cm();
+	}
+
+unsigned int ChairBot::distance_center(){
+	return center_sonar.ping_cm();
+	}
+
+unsigned int ChairBot::distance_right(){
+	return center_sonar.ping_cm();
 	}
 
 int ChairBot::get_heading(){
