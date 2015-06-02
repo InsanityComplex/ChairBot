@@ -10,23 +10,20 @@ boolean state=0;
 void setup() {
   Serial.begin(9600);
   cb.begin();
+  pinMode(13, OUTPUT);
 }
 
 void loop() {
   digitalWrite(13, state);
+  cb.turn_to_heading(90);
+	/*
   Serial.print(cb.distance_left());
   Serial.print(",");
   Serial.print(cb.distance_center());
   Serial.print(",");
   Serial.println(cb.distance_right());
+*/
   state=!state;
-  delay(100);
-  /*
-  cb.drive(2000, 2000); 
-  delay(500);
-  cb.drive(-2000, 2000);
-  delay(500); 
-  cb.drive(2000, -2000);
-  delay(500); 
-  */
+  Serial.println(state);
+  delay(1000);
 }

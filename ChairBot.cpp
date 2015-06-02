@@ -33,12 +33,18 @@ void ChairBot::drive(int left, int right){
 	motor.println(right);
 	}
 
-void ChairBot::turn(){
-	
+void ChairBot::turn(int degrees){
+	int current_heading=(compass.get_heading()+degrees)%360;
+	this->drive(128,-128);
+	while(compass.get_heading()!=current_heading){
+		}
+	this->drive(0,0);
 	}
 
-void ChairBot::turn_to_heading(){
-
+void ChairBot::turn_to_heading(int degrees){
+	this->drive(128,-128);
+	while(!((degrees-2)>compass.get_heading()>(degrees+2))){}
+	this->drive(0,0);
 	}
 
 
@@ -57,13 +63,3 @@ unsigned int ChairBot::distance_right(){
 int ChairBot::get_heading(){
 	return compass.get_heading();
 	}
-/*
-void ChairBot::count_pulse(){
-	if (pulse_toggle){
-		pulse_stop=micros();
-		}
-	else{
-		pulse_start=micros();
-		}
-	}
-*/

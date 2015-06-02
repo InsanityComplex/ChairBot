@@ -26,8 +26,8 @@ class ChairBot{
 	void spinRight(int degrees);
 	*/
 	int get_heading();
-	void turn();
-	void turn_to_heading();
+	void turn(int degrees);
+	void turn_to_heading(int degrees);
 	unsigned int distance_left();
 	unsigned int distance_center();
 	unsigned int distance_right();
