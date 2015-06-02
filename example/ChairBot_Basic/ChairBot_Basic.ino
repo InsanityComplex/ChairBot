@@ -14,7 +14,11 @@ void setup() {
 
 void loop() {
   digitalWrite(13, state);
-  Serial.println(cb.get_heading());
+  Serial.print(cb.distance_left());
+  Serial.print(",");
+  Serial.print(cb.distance_center());
+  Serial.print(",");
+  Serial.println(cb.distance_right());
   state=!state;
   delay(100);
   /*

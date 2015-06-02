@@ -10,9 +10,11 @@ int MAX_PING=500;  //Reduce this if pings are causing lag
 SoftwareSerial motor(2,3);
 compass compass;
 
-NewPing left_sonar(4,5, MAX_PING); //Trigger pin, echo pin, max wait time
-NewPing center_sonar(6,7, MAX_PING);
-NewPing right_sonar(8,9, MAX_PING);
+NewPing sensors[3]={
+	NewPing(4,5, MAX_PING),
+	NewPing(6,7, MAX_PING), //Trigger pin, echo pin, max wait time
+	NewPing(8,9, MAX_PING)
+};
 
 ChairBot::ChairBot(){
 	}
@@ -41,15 +43,15 @@ void ChairBot::turn_to_heading(){
 
 
 unsigned int ChairBot::distance_left(){
-	return center_sonar.ping_cm();
+	return sensors[0].ping_cm();
 	}
 
 unsigned int ChairBot::distance_center(){
-	return center_sonar.ping_cm();
+	return sensors[1].ping_cm();
 	}
 
 unsigned int ChairBot::distance_right(){
-	return center_sonar.ping_cm();
+	return sensors[2].ping_cm();
 	}
 
 int ChairBot::get_heading(){
