@@ -1,5 +1,5 @@
 #ifndef ChairBot_h
-#define Chairbot_h
+#define ChairBot_h
 
 #include "Arduino.h"
 
@@ -36,4 +36,4 @@ class ChairBot{
 	unsigned int distance_right();
 };
 
-#endif
+#endif //ChairBot_H
