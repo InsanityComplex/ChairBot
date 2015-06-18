@@ -55,8 +55,8 @@ unsigned int ChairBot::distance_left(){
 	}
 
 unsigned int ChairBot::distance_center(){
-	if(reading==0){reading=1000;}
 	int reading=sensors[1].ping_cm();
+	if(reading==0){reading=1000;}
 	return reading;
 	}
 
