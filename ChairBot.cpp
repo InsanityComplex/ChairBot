@@ -49,15 +49,21 @@ void ChairBot::turn_to_heading(int degrees){
 
 
 unsigned int ChairBot::distance_left(){
-	return sensors[0].ping_cm();
+	int reading=sensors[0].ping_cm();
+	if(reading==0){reading=1000;}
+	return reading;
 	}
 
 unsigned int ChairBot::distance_center(){
-	return sensors[1].ping_cm();
+	if(reading==0){reading=1000;}
+	int reading=sensors[1].ping_cm();
+	return reading;
 	}
 
 unsigned int ChairBot::distance_right(){
-	return sensors[2].ping_cm();
+	int reading=sensors[2].ping_cm();
+	if(reading==0){reading=1000;}
+	return reading;
 	}
 
 int ChairBot::get_heading(){
