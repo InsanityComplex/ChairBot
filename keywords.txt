@@ -1,0 +1,11 @@
+
+#Classes
+ChairBot  KEYWORD1
+compass   KEYWORD1
+
+#Methods and stuff
+begin   KEYWORD2
+drive   KEYWORD2
+get_heading   KEYWORD2
+turn    KEYWORD2
+turn_to_heading   KEYWORD2
