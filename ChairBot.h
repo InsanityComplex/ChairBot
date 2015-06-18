@@ -2,6 +2,7 @@
 #define ChairBot_h
 
 #include "Arduino.h"
+#include "compass.h"
 
 class ChairBot{
 	public:

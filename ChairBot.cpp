@@ -1,7 +1,6 @@
 #include "Arduino.h"
 #include <SoftwareSerial.h>
 #include <NewPing.h>
-#include <compass.h>
 #include "ChairBot.h"
 
 int MAX_SPEED=1028;
