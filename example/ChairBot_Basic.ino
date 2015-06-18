@@ -1,7 +1,7 @@
 #include <SoftwareSerial.h>
 #include <NewPing.h>
 #include <Wire.h>
-#include <compass/compass.h>
+#include <compass.h>
 #include <ChairBot.h>
 
 ChairBot cb;
