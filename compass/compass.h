@@ -1,3 +1,6 @@
+#ifndef compass_h
+#define compass_h
+
 #include <Arduino.h>
 
 class compass{
@@ -8,3 +11,5 @@ class compass{
 	void begin();
 	int get_heading();
 };
+
+#endif //compass_h
